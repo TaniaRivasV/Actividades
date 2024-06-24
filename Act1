@@ -1,0 +1,310 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOLthPvdh+wSaTyiWN8NIjw",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "ir",
+      "display_name": "R"
+    },
+    "language_info": {
+      "name": "R"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/TaniaRivasV/hyperblog/blob/main/Act1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 255
+        },
+        "id": "Lcbk0OpUGi9x",
+        "outputId": "48fdc9be-5f07-48e6-e545-1055960ebcb0"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " [1] 0.62850505 0.42738045 0.64732776 0.30781809 0.43802101 0.24153888\n",
+            " [7] 0.87069374 0.89481462 0.37512347 0.61369194 0.60906650 0.73655517\n",
+            "[13] 0.60196833 0.16928455 0.55920216 0.46655868 0.46462980 0.72155330\n",
+            "[19] 0.44892799 0.08155511\n",
+            "[1] 0.5152108\n",
+            "[1] 0.04676546\n",
+            "[1] 0.2162532\n",
+            "[1] 20\n",
+            "[1] 0.04442719\n",
+            "[1] 0.2054406\n"
+          ]
+        },
+        {
+          "output_type": "error",
+          "ename": "ERROR",
+          "evalue": "Error in randomNumbers(n = 20, col = 1, min = 0, max = 1000): could not find function \"randomNumbers\"\n",
+          "traceback": [
+            "Error in randomNumbers(n = 20, col = 1, min = 0, max = 1000): could not find function \"randomNumbers\"\nTraceback:\n"
+          ]
+        }
+      ],
+      "source": [
+        "X <- runif(20)\n",
+        "\n",
+        "\n",
+        "\n",
+        "print(X)\n",
+        "\n",
+        "media <- mean(X)\n",
+        "\n",
+        "print(media)\n",
+        "\n",
+        "cuasivarianza <- var(X)\n",
+        "\n",
+        "print(cuasivarianza)\n",
+        "\n",
+        "cuasidt <- sd(X)\n",
+        "\n",
+        "print(cuasidt)\n",
+        "\n",
+        "n <- length(X)\n",
+        "\n",
+        "print(n)\n",
+        "\n",
+        "varianza <- var(X)*(n-1)/n\n",
+        "\n",
+        "print(varianza)\n",
+        "\n",
+        "dt <- sd(X)*(n-1)/n\n",
+        "\n",
+        "print (dt)\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Y<-runif(50,10,100)\n",
+        "Y<-trunc(Y)\n",
+        "\n",
+        "print(Y)\n",
+        "\n",
+        "media <- mean(Y)\n",
+        "\n",
+        "print(media)\n",
+        "\n",
+        "cuasivarianza <- var(Y)\n",
+        "\n",
+        "print(cuasivarianza)\n",
+        "\n",
+        "cuasidt <- sd(Y)\n",
+        "\n",
+        "print(cuasidt)\n",
+        "\n",
+        "n <- length(Y)\n",
+        "\n",
+        "print(n)\n",
+        "\n",
+        "varianza <- var(Y)*(n-1)/n\n",
+        "\n",
+        "print(varianza)\n",
+        "\n",
+        "dt <- sd(Y)*(n-1)/n\n",
+        "\n",
+        "print (dt)\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4xciOS7zIwlh",
+        "outputId": "9fe366ee-bcb0-4af5-feff-a07640213e7e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " [1] 39 50 68 16 11 40 64 31 32 58 63 91 45 69 33 20 40 72 88 26 55 15 49 49 77\n",
+            "[26] 52 58 22 48 20 21 92 31 20 43 62 73 91 61 67 92 61 43 99 94 92 66 55 44 45\n",
+            "[1] 53.06\n",
+            "[1] 582.0576\n",
+            "[1] 24.12587\n",
+            "[1] 50\n",
+            "[1] 570.4164\n",
+            "[1] 23.64335\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Generar 20 números aleatorios entre 0 y 1000\n",
+        "X <- sample(0:1000, size = 20, replace = TRUE)\n",
+        "\n",
+        "# Dividir los números por 1000\n",
+        "X <- X / 1000\n",
+        "\n",
+        "# Ver los valores resultantes\n",
+        "print(X)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PmifM7N3KtlR",
+        "outputId": "d3fb1105-d38a-410d-ede8-4cb2b3010086"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " [1] 0.420 0.303 0.999 0.741 0.626 0.282 0.492 0.970 0.861 0.285 0.705 0.292\n",
+            "[13] 0.669 0.342 0.726 0.315 0.618 0.071 0.277 0.909\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "X <- runif(n = 20, min = 0, max = 1000)\n",
+        "X <- X / 1000\n",
+        "\n",
+        "print(X)\n",
+        "\n",
+        "media <- mean(X)\n",
+        "\n",
+        "print(media)\n",
+        "\n",
+        "cuasivarianza <- var(X)\n",
+        "\n",
+        "print(cuasivarianza)\n",
+        "\n",
+        "cuasidt <- sd(X)\n",
+        "\n",
+        "print(cuasidt)\n",
+        "\n",
+        "n <- length(X)\n",
+        "\n",
+        "print(n)\n",
+        "\n",
+        "varianza <- var(X)*(n-1)/n\n",
+        "\n",
+        "print(varianza)\n",
+        "\n",
+        "dt <- sd(X)*(n-1)/n\n",
+        "\n",
+        "print (dt)\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yzIwEYE6ar4-",
+        "outputId": "75398747-d95e-482e-ce16-0b1e443e8684"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " [1] 0.995975294 0.537013351 0.165626301 0.145852181 0.447265232 0.245399997\n",
+            " [7] 0.494366665 0.076192577 0.619839535 0.853201673 0.470023046 0.248933221\n",
+            "[13] 0.970272056 0.550917421 0.269069379 0.949546362 0.855262659 0.380226927\n",
+            "[19] 0.884239521 0.002771764\n",
+            "[1] 0.5080998\n",
+            "[1] 0.1025353\n",
+            "[1] 0.3202113\n",
+            "[1] 20\n",
+            "[1] 0.09740854\n",
+            "[1] 0.3042008\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Y <- runif(n = 50, min = 0, max = 100)\n",
+        "\n",
+        "\n",
+        "\n",
+        "Y_enteros <- round(Y)\n",
+        "\n",
+        "print(Y_enteros)\n",
+        "\n",
+        "media <- mean(Y_enteros)\n",
+        "\n",
+        "print(media)\n",
+        "\n",
+        "cuasivarianza <- var(Y_enteros)\n",
+        "\n",
+        "print(cuasivarianza)\n",
+        "\n",
+        "cuasidt <- sd(Y_enteros)\n",
+        "\n",
+        "print(cuasidt)\n",
+        "\n",
+        "n <- length(Y_enteros)\n",
+        "\n",
+        "print(n)\n",
+        "\n",
+        "varianza <- var(Y_enteros)*(n-1)/n\n",
+        "\n",
+        "print(varianza)\n",
+        "\n",
+        "dt <- sd(Y_enteros)*(n-1)/n\n",
+        "\n",
+        "print (dt)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_zo4wNUhexJe",
+        "outputId": "b60142d7-8743-4c97-b867-b9863e920471"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " [1] 29 87 40 50 48 53 55 83  1 49 62 58 20  5  8 10 82 99 21 53 77 88 38 88 54\n",
+            "[26] 94 84 35 45 32  3 58 88 53  9 24 58 68 15  0 30 57 10 93 70 81 84 51 78  5\n",
+            "[1] 49.66\n",
+            "[1] 878.9637\n",
+            "[1] 29.64732\n",
+            "[1] 50\n",
+            "[1] 861.3844\n",
+            "[1] 29.05438\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
